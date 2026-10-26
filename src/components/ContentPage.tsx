@@ -1,0 +1,5 @@
+import Link from "next/link";
+
+export default function ContentPage({ eyebrow, title, intro, children }: { eyebrow: string; title: string; intro: string; children: React.ReactNode }) {
+  return <><section className="content-page-hero py-20 sm:py-28"><div className="container"><p className="text-xs font-bold uppercase tracking-[.2em]">{eyebrow}</p><h1 className="mt-6 max-w-4xl">{title}</h1><p className="mt-7 max-w-2xl text-lg leading-8">{intro}</p></div></section><main className="section content-page"><div className="container">{children}<div className="content-page-cta mt-16 rounded-[28px] p-8 sm:p-12"><p className="eyebrow">Take the next step</p><h2 className="mt-4 max-w-2xl text-3xl sm:text-5xl">Start with what you want to understand.</h2><div className="mt-7 flex flex-wrap gap-3"><Link className="button button-primary" href="/courses">Explore courses <span aria-hidden="true">↗</span></Link><Link className="button border border-[var(--line)] bg-white" href="/colleges">Explore colleges <span aria-hidden="true">→</span></Link></div></div></div></main></>;
+}
